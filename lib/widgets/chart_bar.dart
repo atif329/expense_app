@@ -4,15 +4,18 @@ class ChartBar extends StatelessWidget {
   final String label;
   final double spendingAmount;
   final double spendingPctOfTotal;
-  ChartBar(this.label, this.spendingAmount, this.spendingPctOfTotal);
+  const ChartBar(this.label, this.spendingAmount, this.spendingPctOfTotal);
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("\$${spendingAmount.toStringAsFixed(0)}"),
-        SizedBox(
+        FittedBox(
+          child: Text("\$${spendingAmount.toStringAsFixed(0)}"),
+        ),
+        const SizedBox(
           height: 4,
         ),
+        // ignore: sized_box_for_whitespace
         Container(
           height: 60,
           width: 10,
@@ -39,7 +42,7 @@ class ChartBar extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 4,
         ),
         Text(label),

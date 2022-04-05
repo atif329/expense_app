@@ -100,10 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Personal Expenses",
-          // style: TextStyle(fontFamily: 'OpenSans'),
-        ),
+        title: const Text("Personal Expenses",
+            style: TextStyle(color: Colors.amber)
+            //TextStyle(fontFamily: 'OpenSans'),
+            ),
         actions: [
           IconButton(
             onPressed: () => _startAddNewTransaction(context),
