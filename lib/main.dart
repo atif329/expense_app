@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.purple,
         fontFamily: 'Quicksand',
         textTheme: ThemeData.light().textTheme.copyWith(
-              headline1: TextStyle(
-                fontFamily: 'OpenSans',
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+            headline1: TextStyle(
+              fontFamily: 'OpenSans',
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
+            button: TextStyle(color: Colors.white)),
         appBarTheme: AppBarTheme(
           titleTextStyle: TextStyle(
               fontFamily: 'OpenSans',
@@ -128,6 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).primaryColor,
         child: Icon(Icons.add),
         onPressed: () => _startAddNewTransaction(context),
       ),
